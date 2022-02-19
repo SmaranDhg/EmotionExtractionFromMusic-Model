@@ -1,5 +1,6 @@
 # this script is for archiving the logs and models 
 
+mkdir -p archives/
 mkdir -p logs/
 mkdir -p archives/logs
 

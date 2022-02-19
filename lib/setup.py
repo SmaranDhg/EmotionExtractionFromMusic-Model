@@ -2,13 +2,17 @@ from math import ceil
 import tensorflow as tf
 
 import tensorflow_addons as tfa
-
+import os
 
 DIR_SAVE_MODEL = "saved_models"
 DIR_LOGS = "logs"
 DIR_ASSETS = "assets"
 DIR_RUN = "runs"
 DIR_PICKLE = f"{DIR_ASSETS}/pickles"
+
+for p in [k for k in globals().keys() if p.startswith("DIR")]:
+    os.makedirs(globals()[p], exist_ok=True)
+
 
 # input
 EMBEDDING_SIZE = 40
