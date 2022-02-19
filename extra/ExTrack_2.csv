@@ -2,4 +2,4 @@ Model Version,Changes,Reason,Betas,Dataset Config,Loss,Val Loss,Rsquare,Val Rsqu
 16.03,Add some dropout layers,Overfitting,".9,.999",500ms-64x32,.03,.5,.55,-.1,Overfitting
 16.04,Adjust more dropout and change featured vector from 16 to 32,'','','',.03,.1,.51,-.56,Overfitting
 16.05,feature vector to 64,its showed some degree of improvement with bigger feature vector,'','',.0205, 0.0424,0.6960,0.4138,Overfitting
-16.05,,,,,,,,,
+16.08,"super deep, pure resnet blocks",model was overfitting ,'','',,,,,
