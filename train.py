@@ -105,6 +105,7 @@ model.fit(
     use_multiprocessing=True,
     validation_data=dataset_val,
     validation_steps=ceil((DATA_POINTS - 65070) / BATCH_SIZE),
+    # validation_split=0.2,
     validation_freq=1,
 )
 
