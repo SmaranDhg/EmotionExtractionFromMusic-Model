@@ -7,8 +7,17 @@ from lib.setup import INPUT_SHAPE, OUT, OUT_1, OUT_2
 
 
 class IdentityBlock(tf.keras.Model):
-    def __init__(self, filters, kernel_size, data_format="channels_last", name=None):
+    def __init__(
+        self,
+        filters,
+        kernel_size,
+        res_net=False,
+        data_format="channels_last",
+        name=None,
+    ):
         super().__init__(name=name)
+
+        self.res_net = res_net
         self.conv_in = tf.keras.layers.Conv2D(
             filters, kernel_size, padding="same", data_format=data_format
         )
@@ -27,7 +36,8 @@ class IdentityBlock(tf.keras.Model):
         self.add = tf.keras.layers.Add()
 
     def call(self, input_tensor):
-        input_tensor = self.conv_in(input_tensor)
+        if not self.res_net:
+            input_tensor = self.conv_in(input_tensor)
 
         x = self.conv_1(input_tensor)
         x = self.bn1(x)
@@ -55,22 +65,30 @@ class Model(tf.keras.models.Model):
             tf.keras.layers.Activation("softsign"),
             tf.keras.layers.MaxPool2D((2, 2)),
             tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4),
-            IdentityBlock(64, 4),
+            IdentityBlock(64, 4, True),
             tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4),
+            IdentityBlock(64, 4, True),
+            tf.keras.layers.Dropout(0.5),
+            IdentityBlock(64, 4, True),
+            tf.keras.layers.Dropout(0.5),
+            IdentityBlock(64, 4, True),
+            tf.keras.layers.Dropout(0.5),
+            IdentityBlock(64, 4, True),
             tf.keras.layers.Dropout(0.4),
-            IdentityBlock(64, 4),
+            IdentityBlock(64, 4, True),
             tf.keras.layers.Dropout(0.3),
             IdentityBlock(32, 3),
             tf.keras.layers.Dropout(0.3),
-            IdentityBlock(32, 3),
+            IdentityBlock(32, 3, True),
             tf.keras.layers.Dropout(0.3),
             IdentityBlock(64, 3),
-            tf.keras.layers.Dropout(0.2),
+            tf.keras.layers.Dropout(0.3),
             IdentityBlock(64, 3),
-            tf.keras.layers.Dropout(0.2),
-            IdentityBlock(64, 3),
+            tf.keras.layers.Dropout(0.3),
+            IdentityBlock(64, 3, True),
+            tf.keras.layers.Dropout(0.3),
+            IdentityBlock(64, 3, True),
+            IdentityBlock(124, 3),
             tf.keras.layers.GlobalAveragePooling2D(),
         ]
 
@@ -82,7 +100,7 @@ class Model(tf.keras.models.Model):
             tf.keras.layers.Dense(150, activation="softsign"),
             tf.keras.layers.Dropout(0.3),
             tf.keras.layers.Dense(100, activation="softsign"),
-            tf.keras.layers.Dropout(0.2),
+            tf.keras.layers.Dropout(0.3),
             tf.keras.layers.Dense(100, activation="softsign"),
             tf.keras.layers.Dense(1, name=OUT),
         ]

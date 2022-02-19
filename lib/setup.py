@@ -25,7 +25,7 @@ TEMPORAL_BANDS = 22  # TB
 # model
 MODEL = "classifier"
 CALLBACK = "general"
-MODEL_ANNOT = "exp_16.05"
+MODEL_ANNOT = "exp_16.06"
 INPUT_SHAPE = (None, MEL_FREQUENCY_BANDS, TEMPORAL_BANDS, 1)
 LOSS_FUNC = tf.keras.losses.MeanSquaredError()
 METRICS = [
