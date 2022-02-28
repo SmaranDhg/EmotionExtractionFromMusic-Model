@@ -59,63 +59,43 @@ class Model(tf.keras.models.Model):
 
         self.in_shape = in_shape
 
-        self.feature_layers = [
-            tf.keras.layers.Conv2D(124, 4, padding="same"),
-            tf.keras.layers.BatchNormalization(),
-            tf.keras.layers.Activation("softsign"),
-            tf.keras.layers.MaxPool2D((2, 2)),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4, True),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4, True),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4, True),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4, True),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4, True),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4, True),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4, True),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4, True),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4, True),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4, True),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4, True),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4, True),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4, True),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4, True),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4, True),
-            tf.keras.layers.Dropout(0.5),
-            IdentityBlock(64, 4, True),
-            tf.keras.layers.GlobalAveragePooling2D(),
-            tf.keras.layers.Dropout(0.5),
-        ]
+        self.feature_layers = (
+            [
+                tf.keras.layers.Conv2D(124, 4, padding="same"),
+                tf.keras.layers.BatchNormalization(),
+                tf.keras.layers.Activation("softsign"),
+                tf.keras.layers.MaxPool2D((2, 2)),
+                tf.keras.layers.Dropout(0.5),
+                IdentityBlock(64, 4),
+            ]
+            + [
+                tf.keras.layers.Dropout(0.5)
+                if not i % 3
+                else IdentityBlock(64, 4, True)
+                for i in range(1, 30 * 2)
+            ]
+            + [
+                tf.keras.layers.GlobalAveragePooling2D(),
+                tf.keras.layers.Dropout(0.5),
+            ]
+        )
 
         self.reg_layers = [
-            tf.keras.layers.Dense(300, activation="softsign"),
+            tf.keras.layers.Dense(124, activation="softsign"),
             tf.keras.layers.Dropout(0.5),
-            tf.keras.layers.Dense(200, activation="softsign"),
+            tf.keras.layers.Dense(124, activation="softsign"),
             tf.keras.layers.Dropout(0.4),
-            tf.keras.layers.Dense(150, activation="softsign"),
+            tf.keras.layers.Dense(64, activation="softsign"),
             tf.keras.layers.Dropout(0.3),
-            tf.keras.layers.Dense(100, activation="softsign"),
+            tf.keras.layers.Dense(64, activation="softsign"),
             tf.keras.layers.Dropout(0.3),
-            tf.keras.layers.Dense(100, activation="softsign"),
+            tf.keras.layers.Dense(64, activation="softsign"),
             tf.keras.layers.Dropout(0.3),
-            tf.keras.layers.Dense(100, activation="softsign"),
+            tf.keras.layers.Dense(32, activation="softsign"),
             tf.keras.layers.Dropout(0.3),
-            tf.keras.layers.Dense(100, activation="softsign"),
+            tf.keras.layers.Dense(32, activation="softsign"),
+            tf.keras.layers.Dropout(0.3),
+            tf.keras.layers.Dense(8, activation="softsign"),
             tf.keras.layers.Dense(1, name=OUT),
         ]
         self.segments = [

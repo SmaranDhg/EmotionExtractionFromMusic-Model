@@ -1,0 +1,891 @@
+2022-02-28 18:41:54,597 - TRAIN - INFO - Loading Saved Model: saved_models/saved_instance_exp_16.10_arousal/epoch_0!!
+2022-02-28 18:41:54,597 - TRAIN - INFO - Creating new Model.
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             multiple                  2108      
+                                                                 
+ batch_normalization (BatchN  multiple                 496       
+ ormalization)                                                   
+                                                                 
+ activation (Activation)     multiple                  0         
+                                                                 
+ max_pooling2d (MaxPooling2D  multiple                 0         
+ )                                                               
+                                                                 
+ dropout (Dropout)           multiple                  0         
+                                                                 
+ identity_block (IdentityBlo  multiple                 258752    
+ ck)                                                             
+                                                                 
+ identity_block_1 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_2 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ dropout_1 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_3 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_4 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ dropout_2 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_5 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_6 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ dropout_3 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_7 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_8 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ dropout_4 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_9 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_10 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_5 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_11 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_12 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_6 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_13 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_14 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_7 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_15 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_16 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_8 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_17 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_18 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_9 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_19 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_20 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_10 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_21 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_22 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_11 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_23 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_24 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_12 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_25 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_26 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_13 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_27 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_28 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_14 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_29 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_30 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_15 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_31 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_32 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_16 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_33 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_34 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_17 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_35 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_36 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_18 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_37 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_38 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_19 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_39 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_40 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ global_average_pooling2d (G  multiple                 0         
+ lobalAveragePooling2D)                                          
+                                                                 
+ dropout_20 (Dropout)        multiple                  0         
+                                                                 
+ dense (Dense)               multiple                  8060      
+                                                                 
+ dropout_21 (Dropout)        multiple                  0         
+                                                                 
+ dense_1 (Dense)             multiple                  15500     
+                                                                 
+ dropout_22 (Dropout)        multiple                  0         
+                                                                 
+ dense_2 (Dense)             multiple                  8000      
+                                                                 
+ dropout_23 (Dropout)        multiple                  0         
+                                                                 
+ dense_3 (Dense)             multiple                  4160      
+                                                                 
+ dropout_24 (Dropout)        multiple                  0         
+                                                                 
+ dense_4 (Dense)             multiple                  4160      
+                                                                 
+ dropout_25 (Dropout)        multiple                  0         
+                                                                 
+ dense_5 (Dense)             multiple                  2080      
+                                                                 
+ dropout_26 (Dropout)        multiple                  0         
+                                                                 
+ dense_6 (Dense)             multiple                  1056      
+                                                                 
+ dropout_27 (Dropout)        multiple                  0         
+                                                                 
+ dense_7 (Dense)             multiple                  264       
+                                                                 
+ arousal (Dense)             multiple                  9         
+                                                                 
+=================================================================
+Total params: 5,573,125
+Trainable params: 5,562,381
+Non-trainable params: 10,744
+_________________________________________________________________
+None
+Epoch 1/1000
+2022-02-28 18:42:41,920 - TRAIN - INFO - Loading Saved Model: saved_models/saved_instance_exp_16.10_arousal/epoch_0!!
+2022-02-28 18:42:41,920 - TRAIN - INFO - Creating new Model.
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             multiple                  2108      
+                                                                 
+ batch_normalization (BatchN  multiple                 496       
+ ormalization)                                                   
+                                                                 
+ activation (Activation)     multiple                  0         
+                                                                 
+ max_pooling2d (MaxPooling2D  multiple                 0         
+ )                                                               
+                                                                 
+ dropout (Dropout)           multiple                  0         
+                                                                 
+ identity_block (IdentityBlo  multiple                 258752    
+ ck)                                                             
+                                                                 
+ identity_block_1 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_2 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ dropout_1 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_3 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_4 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ dropout_2 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_5 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_6 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ dropout_3 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_7 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_8 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ dropout_4 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_9 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_10 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_5 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_11 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_12 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_6 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_13 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_14 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_7 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_15 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_16 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_8 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_17 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_18 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_9 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_19 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_20 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_10 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_21 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_22 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_11 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_23 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_24 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_12 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_25 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_26 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_13 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_27 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_28 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_14 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_29 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_30 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_15 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_31 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_32 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_16 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_33 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_34 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_17 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_35 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_36 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_18 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_37 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_38 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_19 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_39 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_40 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ global_average_pooling2d (G  multiple                 0         
+ lobalAveragePooling2D)                                          
+                                                                 
+ dropout_20 (Dropout)        multiple                  0         
+                                                                 
+ dense (Dense)               multiple                  8060      
+                                                                 
+ dropout_21 (Dropout)        multiple                  0         
+                                                                 
+ dense_1 (Dense)             multiple                  15500     
+                                                                 
+ dropout_22 (Dropout)        multiple                  0         
+                                                                 
+ dense_2 (Dense)             multiple                  8000      
+                                                                 
+ dropout_23 (Dropout)        multiple                  0         
+                                                                 
+ dense_3 (Dense)             multiple                  4160      
+                                                                 
+ dropout_24 (Dropout)        multiple                  0         
+                                                                 
+ dense_4 (Dense)             multiple                  4160      
+                                                                 
+ dropout_25 (Dropout)        multiple                  0         
+                                                                 
+ dense_5 (Dense)             multiple                  2080      
+                                                                 
+ dropout_26 (Dropout)        multiple                  0         
+                                                                 
+ dense_6 (Dense)             multiple                  1056      
+                                                                 
+ dropout_27 (Dropout)        multiple                  0         
+                                                                 
+ dense_7 (Dense)             multiple                  264       
+                                                                 
+ arousal (Dense)             multiple                  9         
+                                                                 
+=================================================================
+Total params: 5,573,125
+Trainable params: 5,562,381
+Non-trainable params: 10,744
+_________________________________________________________________
+None
+2022-02-28 18:43:21,024 - TRAIN - INFO - Loading Saved Model: saved_models/saved_instance_exp_16.10_arousal/epoch_0!!
+2022-02-28 18:43:21,024 - TRAIN - INFO - Creating new Model.
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             multiple                  2108      
+                                                                 
+ batch_normalization (BatchN  multiple                 496       
+ ormalization)                                                   
+                                                                 
+ activation (Activation)     multiple                  0         
+                                                                 
+ max_pooling2d (MaxPooling2D  multiple                 0         
+ )                                                               
+                                                                 
+ dropout (Dropout)           multiple                  0         
+                                                                 
+ identity_block (IdentityBlo  multiple                 258752    
+ ck)                                                             
+                                                                 
+ identity_block_1 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_2 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ dropout_1 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_3 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_4 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ dropout_2 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_5 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_6 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ dropout_3 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_7 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_8 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ dropout_4 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_9 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_10 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_5 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_11 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_12 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_6 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_13 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_14 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_7 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_15 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_16 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_8 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_17 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_18 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_9 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_19 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_20 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_10 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_21 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_22 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_11 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_23 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_24 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_12 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_25 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_26 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_13 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_27 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_28 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_14 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_29 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_30 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_15 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_31 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_32 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_16 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_33 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_34 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_17 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_35 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_36 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_18 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_37 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_38 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_19 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_39 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_40 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ global_average_pooling2d (G  multiple                 0         
+ lobalAveragePooling2D)                                          
+                                                                 
+ dropout_20 (Dropout)        multiple                  0         
+                                                                 
+ dense (Dense)               multiple                  8060      
+                                                                 
+ dropout_21 (Dropout)        multiple                  0         
+                                                                 
+ dense_1 (Dense)             multiple                  15500     
+                                                                 
+ dropout_22 (Dropout)        multiple                  0         
+                                                                 
+ dense_2 (Dense)             multiple                  8000      
+                                                                 
+ dropout_23 (Dropout)        multiple                  0         
+                                                                 
+ dense_3 (Dense)             multiple                  4160      
+                                                                 
+ dropout_24 (Dropout)        multiple                  0         
+                                                                 
+ dense_4 (Dense)             multiple                  4160      
+                                                                 
+ dropout_25 (Dropout)        multiple                  0         
+                                                                 
+ dense_5 (Dense)             multiple                  2080      
+                                                                 
+ dropout_26 (Dropout)        multiple                  0         
+                                                                 
+ dense_6 (Dense)             multiple                  1056      
+                                                                 
+ dropout_27 (Dropout)        multiple                  0         
+                                                                 
+ dense_7 (Dense)             multiple                  264       
+                                                                 
+ arousal (Dense)             multiple                  9         
+                                                                 
+=================================================================
+Total params: 5,573,125
+Trainable params: 5,562,381
+Non-trainable params: 10,744
+_________________________________________________________________
+None
+2022-02-28 18:43:44,172 - TRAIN - INFO - Loading Saved Model: saved_models/saved_instance_exp_16.10_arousal/epoch_0!!
+2022-02-28 18:43:44,172 - TRAIN - INFO - Creating new Model.
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             multiple                  2108      
+                                                                 
+ batch_normalization (BatchN  multiple                 496       
+ ormalization)                                                   
+                                                                 
+ activation (Activation)     multiple                  0         
+                                                                 
+ max_pooling2d (MaxPooling2D  multiple                 0         
+ )                                                               
+                                                                 
+ dropout (Dropout)           multiple                  0         
+                                                                 
+ identity_block (IdentityBlo  multiple                 258752    
+ ck)                                                             
+                                                                 
+ identity_block_1 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_2 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ dropout_1 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_3 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_4 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ dropout_2 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_5 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_6 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ dropout_3 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_7 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_8 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ dropout_4 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_9 (IdentityB  multiple                 131712    
+ lock)                                                           
+                                                                 
+ identity_block_10 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_5 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_11 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_12 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_6 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_13 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_14 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_7 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_15 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_16 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_8 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_17 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_18 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_9 (Dropout)         multiple                  0         
+                                                                 
+ identity_block_19 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_20 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_10 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_21 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_22 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_11 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_23 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_24 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_12 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_25 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_26 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_13 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_27 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_28 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_14 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_29 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_30 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_15 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_31 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_32 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_16 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_33 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_34 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_17 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_35 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_36 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_18 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_37 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_38 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ dropout_19 (Dropout)        multiple                  0         
+                                                                 
+ identity_block_39 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ identity_block_40 (Identity  multiple                 131712    
+ Block)                                                          
+                                                                 
+ global_average_pooling2d (G  multiple                 0         
+ lobalAveragePooling2D)                                          
+                                                                 
+ dropout_20 (Dropout)        multiple                  0         
+                                                                 
+ dense (Dense)               multiple                  8060      
+                                                                 
+ dropout_21 (Dropout)        multiple                  0         
+                                                                 
+ dense_1 (Dense)             multiple                  15500     
+                                                                 
+ dropout_22 (Dropout)        multiple                  0         
+                                                                 
+ dense_2 (Dense)             multiple                  8000      
+                                                                 
+ dropout_23 (Dropout)        multiple                  0         
+                                                                 
+ dense_3 (Dense)             multiple                  4160      
+                                                                 
+ dropout_24 (Dropout)        multiple                  0         
+                                                                 
+ dense_4 (Dense)             multiple                  4160      
+                                                                 
+ dropout_25 (Dropout)        multiple                  0         
+                                                                 
+ dense_5 (Dense)             multiple                  2080      
+                                                                 
+ dropout_26 (Dropout)        multiple                  0         
+                                                                 
+ dense_6 (Dense)             multiple                  1056      
+                                                                 
+ dropout_27 (Dropout)        multiple                  0         
+                                                                 
+ dense_7 (Dense)             multiple                  264       
+                                                                 
+ arousal (Dense)             multiple                  9         
+                                                                 
+=================================================================
+Total params: 5,573,125
+Trainable params: 5,562,381
+Non-trainable params: 10,744
+_________________________________________________________________
+None
+Epoch 1/1000
+  1/509 [..............................] - ETA: 1:28:17 - loss: 0.0691 - mae: 0.2065 - r_square: -0.6008  2/509 [..............................] - ETA: 6:09 - loss: 0.0645 - mae: 0.2009 - r_square: -0.5230     3/509 [..............................] - ETA: 6:27 - loss: 0.0634 - mae: 0.2003 - r_square: -0.3530  4/509 [..............................] - ETA: 6:29 - loss: 0.0630 - mae: 0.1985 - r_square: -0.2896  5/509 [..............................] - ETA: 6:27 - loss: 0.0623 - mae: 0.1996 - r_square: -0.2741  6/509 [..............................] - ETA: 6:26 - loss: 0.0636 - mae: 0.2012 - r_square: -0.2589  7/509 [..............................] - ETA: 6:27 - loss: 0.0624 - mae: 0.2004 - r_square: -0.2494  8/509 [..............................] - ETA: 6:26 - loss: 0.0619 - mae: 0.2006 - r_square: -0.2501  9/509 [..............................] - ETA: 6:24 - loss: 0.0636 - mae: 0.2036 - r_square: -0.2406 10/509 [..............................] - ETA: 6:22 - loss: 0.0646 - mae: 0.2051 - r_square: -0.2302 11/509 [..............................] - ETA: 6:20 - loss: 0.0654 - mae: 0.2061 - r_square: -0.2263 12/509 [..............................] - ETA: 6:19 - loss: 0.0665 - mae: 0.2078 - r_square: -0.2194 13/509 [..............................] - ETA: 6:17 - loss: 0.0671 - mae: 0.2087 - r_square: -0.2034 14/509 [..............................] - ETA: 6:15 - loss: 0.0687 - mae: 0.2105 - r_square: -0.1974 15/509 [..............................] - ETA: 6:13 - loss: 0.0696 - mae: 0.2120 - r_square: -0.1950 16/509 [..............................] - ETA: 6:11 - loss: 0.0688 - mae: 0.2109 - r_square: -0.1885 17/509 [>.............................] - ETA: 6:10 - loss: 0.0688 - mae: 0.2111 - r_square: -0.1863 18/509 [>.............................] - ETA: 6:08 - loss: 0.0700 - mae: 0.2121 - r_square: -0.1794 19/509 [>.............................] - ETA: 6:07 - loss: 0.0700 - mae: 0.2119 - r_square: -0.1727 20/509 [>.............................] - ETA: 6:05 - loss: 0.0702 - mae: 0.2122 - r_square: -0.1629 21/509 [>.............................] - ETA: 6:04 - loss: 0.0707 - mae: 0.2127 - r_square: -0.1613 22/509 [>.............................] - ETA: 6:03 - loss: 0.0709 - mae: 0.2130 - r_square: -0.1542 23/509 [>.............................] - ETA: 6:02 - loss: 0.0700 - mae: 0.2115 - r_square: -0.1475 24/509 [>.............................] - ETA: 6:01 - loss: 0.0698 - mae: 0.2113 - r_square: -0.1467 25/509 [>.............................] - ETA: 6:00 - loss: 0.0702 - mae: 0.2122 - r_square: -0.1477 26/509 [>.............................] - ETA: 5:59 - loss: 0.0703 - mae: 0.2121 - r_square: -0.1405 27/509 [>.............................] - ETA: 5:58 - loss: 0.0699 - mae: 0.2114 - r_square: -0.1365 28/509 [>.............................] - ETA: 5:57 - loss: 0.0700 - mae: 0.2118 - r_square: -0.1299 29/509 [>.............................] - ETA: 5:56 - loss: 0.0697 - mae: 0.2113 - r_square: -0.1300 30/509 [>.............................] - ETA: 5:55 - loss: 0.0704 - mae: 0.2122 - r_square: -0.1306 31/509 [>.............................] - ETA: 5:54 - loss: 0.0704 - mae: 0.2124 - r_square: -0.1298 32/509 [>.............................] - ETA: 5:53 - loss: 0.0704 - mae: 0.2122 - r_square: -0.1318 33/509 [>.............................] - ETA: 5:53 - loss: 0.0703 - mae: 0.2120 - r_square: -0.1297 34/509 [=>............................] - ETA: 5:52 - loss: 0.0700 - mae: 0.2117 - r_square: -0.1302 35/509 [=>............................] - ETA: 5:51 - loss: 0.0698 - mae: 0.2113 - r_square: -0.1276 36/509 [=>............................] - ETA: 5:50 - loss: 0.0698 - mae: 0.2113 - r_square: -0.1245 37/509 [=>............................] - ETA: 5:50 - loss: 0.0694 - mae: 0.2106 - r_square: -0.1224 38/509 [=>............................] - ETA: 5:50 - loss: 0.0694 - mae: 0.2105 - r_square: -0.1200 39/509 [=>............................] - ETA: 5:49 - loss: 0.0695 - mae: 0.2107 - r_square: -0.1199 40/509 [=>............................] - ETA: 5:49 - loss: 0.0694 - mae: 0.2105 - r_square: -0.1183 41/509 [=>............................] - ETA: 5:49 - loss: 0.0696 - mae: 0.2107 - r_square: -0.1142 42/509 [=>............................] - ETA: 5:48 - loss: 0.0696 - mae: 0.2107 - r_square: -0.1139 43/509 [=>............................] - ETA: 5:48 - loss: 0.0693 - mae: 0.2101 - r_square: -0.1129 44/509 [=>............................] - ETA: 5:48 - loss: 0.0692 - mae: 0.2100 - r_square: -0.1109 45/509 [=>............................] - ETA: 5:47 - loss: 0.0693 - mae: 0.2101 - r_square: -0.1099 46/509 [=>............................] - ETA: 5:47 - loss: 0.0696 - mae: 0.2105 - r_square: -0.1090 47/509 [=>............................] - ETA: 5:46 - loss: 0.0696 - mae: 0.2104 - r_square: -0.1070 48/509 [=>............................] - ETA: 5:46 - loss: 0.0698 - mae: 0.2106 - r_square: -0.1065 49/509 [=>............................] - ETA: 5:45 - loss: 0.0697 - mae: 0.2104 - r_square: -0.1048 50/509 [=>............................] - ETA: 5:44 - loss: 0.0697 - mae: 0.2104 - r_square: -0.1024 51/509 [==>...........................] - ETA: 5:44 - loss: 0.0697 - mae: 0.2102 - r_square: -0.1037

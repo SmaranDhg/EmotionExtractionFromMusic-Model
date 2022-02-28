@@ -10,7 +10,7 @@ DIR_ASSETS = "assets"
 DIR_RUN = "runs"
 DIR_PICKLE = f"{DIR_ASSETS}/pickles"
 
-for p in [k for k in globals().keys() if p.startswith("DIR")]:
+for p in [k for k in globals().keys() if k.startswith("DIR")]:
     os.makedirs(globals()[p], exist_ok=True)
 
 
@@ -29,7 +29,7 @@ TEMPORAL_BANDS = 22  # TB
 # model
 MODEL = "classifier"
 CALLBACK = "general"
-MODEL_ANNOT = "exp_16.08"
+MODEL_ANNOT = "exp_16.10"
 INPUT_SHAPE = (None, MEL_FREQUENCY_BANDS, TEMPORAL_BANDS, 1)
 LOSS_FUNC = tf.keras.losses.MeanSquaredError()
 METRICS = [
@@ -47,7 +47,7 @@ PICKLE_ANOT = f"data_chunk_list_500ms_{MEL_FREQUENCY_BANDS}x{TEMPORAL_BANDS}_sin
 
 # train
 DATA_POINTS = 744 * 90
-BATCH_SIZE = 256
+BATCH_SIZE = 128
 STEP_SIZE = 10  # number of batchs per step
 NUM_STEP = ceil(DATA_POINTS / (BATCH_SIZE))  # number of steps per epoch
 

@@ -12,7 +12,7 @@ from lib.setup import *
 from lib.models import get_model
 from lib.callbacks import get_callback
 
-from lib.data import train_dataset
+from lib.data import train_dataset, val_dataset
 from lib.log import *
 
 import os
@@ -31,7 +31,7 @@ logger = get_logger(TEST, redirect_sysout=False)
 Model = get_model()
 Callback = get_callback()
 
-epoch = 0
+epoch =32
 checkpoint_path = f"{DIR_SAVE_MODEL}/{SAVE_MODEL_ANNOT}/epoch_{epoch}"
 logger.info(f"Loading Saved Model: {checkpoint_path}!!")
 model = tf.keras.models.load_model(checkpoint_path, compile=False)
@@ -40,7 +40,7 @@ logger.info("Saved Model Loaded!")
 
 # %%
 
-train_gen = iter(train_dataset(from_pickle=False))
+train_gen = iter(val_dataset(from_pickle=False))
 # %%
 
 X, y = next(train_gen)

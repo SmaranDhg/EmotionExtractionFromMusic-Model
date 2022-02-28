@@ -174,6 +174,8 @@ def anot_exist(x):
     x = x.numpy()
     x = x.decode("utf-8")
     x = int(re.match(pat, x).group(1))
+    if np.random.random() < 0.5:
+        return False
     return (avg_valence_df.song_id == x).any()
 
 
